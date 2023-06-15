@@ -13,7 +13,7 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <WalletContextProvider
       network="testnet"
-      contractAddress="mblademo1.mintspace2.testnet"
+      contractAddress={process.env.NEXT_PUBLIC_MINTBASE_CONTRACT}
     >
       <Component {...pageProps} />
     </WalletContextProvider>

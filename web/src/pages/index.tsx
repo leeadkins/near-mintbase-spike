@@ -72,11 +72,11 @@ const MintButton = () => {
     const wallet = await selector.wallet();
     const options = {
       wallet,
-      callbackUrl: "http://localhost:3000",
+      callbackUrl: process.env.NEXT_PUBLIC_REDIRECT_URI,
     };
     const contractCall = {
       signer: activeAccountId,
-      contractAddress: "dev-1686661085346-98289323810075",
+      contractAddress: process.env.NEXT_PUBLIC_PROXY_CONTRACT!,
       methodName: "mint",
       args: {},
       gas: "40000000000000",
